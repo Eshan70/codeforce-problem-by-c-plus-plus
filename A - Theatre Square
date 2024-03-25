@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+    long long m,n,a;
+ 
+    cin>>m>>n>>a;
+ 
+  long long  x= m/a;
+  if(m%a >0)
+  {
+      x++;
+  }
+   long long y= n/a;
+   if(n%a>0)
+   {
+       y++;
+   }
+    long long f=x*y;
+    cout<<f <<endl;
+    return 0;
+}
