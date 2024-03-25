@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+    int h,n,a,b=0,c=0;
+    cin>>h>>n;
+ 
+    for(int i = 1; i<=h; i++)
+    {
+        cin>>a;
+        if(a%n==0)
+        {
+            b=b+(a/n);
+        }
+        else
+        {
+            b=b+(a/n)+1;
+        }
+    }
+    cout<<b;
+}
