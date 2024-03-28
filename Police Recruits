@@ -12,20 +12,21 @@ int x;
 cin>>x;
 if(x>0)
 {
-    police=+x;
+    police+=x;
 
 }
 else {
     if(police<1)
 {
-    crime++;
+    ++crime;
 }
 
 else
 {
-    police--;
+    --police;
 }}}
 cout<<crime;
+return 0;
 }
 
 
