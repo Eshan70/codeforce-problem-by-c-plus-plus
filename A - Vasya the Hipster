@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+
+    if(a>b)
+    {
+        cout<<b<<endl;
+        int c= a-b;
+        if(c%2==0)
+        {
+            cout<<c/2;
+        }
+        else if (c==1)
+        {
+            cout<<"0";
+        }
+        else if(c!=0||c!=1)
+        {
+            cout<<(c-1)/2;
+        }
+    }
+    else
+    {
+        cout<<a<<endl;
+        int c=b-a;
+        if(c%2==0)
+        {
+            cout<<c/2;
+        }
+        else if (c==1)
+        {
+            cout<<"0";
+        }
+        else if(c!=0||c!=1)
+        {
+            cout<<(c-1)/2;
+        }
+
+    }
+
+
+}
