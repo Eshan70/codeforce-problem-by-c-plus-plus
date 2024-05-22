@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int t;
+   
+    cin>>t;
+ 
+   while(t--)
+   {
+       int a,b,c,d;
+        int h=0;
+       cin>>a>>b>>c>>d;
+       
+       if(a<b)
+      {h++;}
+       if(a<c)
+       {h++;}
+       if(a<d)
+        {h++;}
+        cout<<h<<endl;
+   }
+ 
+return 0;
+ 
+}
