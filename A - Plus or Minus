@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+    int i,n;
+    int a,b,c;
+    cin>>n;
+ 
+    while(n--)
+    {
+        cin>>a>>b>>c;
+        int z=a-b;
+        if(z==c)
+        {
+          cout<<'-'<<endl;
+        }
+        else if(a+b==c)
+        {
+            cout<<'+'<<endl;
+        }
+    }
+}
