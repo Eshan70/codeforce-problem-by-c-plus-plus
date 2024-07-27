@@ -1,0 +1,23 @@
+#include<iostream>
+#include<string>
+using namespace std;
+ 
+int main()
+{
+ int i,t;
+ string s;
+ cin>>t;
+ 
+ while(t--)
+ {
+     cin>>s;
+    if(s=="c"||s=="o"||s=="d"||s=="f"||s=="o"||s=="r"||s=="c"||s=="e"||s=="s")
+    {
+        cout<<"YES"<<endl;
+    }
+    else
+    {
+        cout<<"NO"<<endl;
+    }
+ }
+}
