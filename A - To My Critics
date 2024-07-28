@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+    int i,t;
+    cin>>t;
+ 
+    while(t--)
+    {
+        int a,b,c;
+        cin>>a>>b>>c;
+ 
+        if(a+b>10 || a+b==10)
+        {
+            cout<<"YES"<<endl;
+            //break;
+        }
+        else if(a+c>=10)
+        {
+            cout<<"YES"<<endl;
+            //break;
+        }
+        else if(b+c>=10)
+        {
+            cout<<"YES"<<endl;
+            //break;
+        }
+        else
+        {
+            cout<<"NO"<<endl;
+        }
+ 
+    }
+}
