@@ -1,0 +1,25 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+    int i,t;
+    cin>>t;
+    while(t--)
+    {
+        string q;
+        int count=0;
+        string s="codeforces";
+        cin>>q;
+        for(i=0; i<10; i++)
+        {
+            if(s[i]!=q[i])
+             {
+               count++;
+             }
+             //cout<<endl;
+        }
+        cout<<count<<endl;
+    }
+}
