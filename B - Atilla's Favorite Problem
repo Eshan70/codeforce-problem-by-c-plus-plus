@@ -1,0 +1,32 @@
+#include<iostream>
+#include<string>
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int i,t;
+    cin>>t;
+ 
+    while(t--)
+    {
+        int n;
+        //string b;
+        string s;
+        char arr[]={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+        cin>>n;
+        cin>>s;
+        sort(s.begin(), s.end());
+        for(i=0;i<26;i++)
+        {
+        if(arr[i]==s[n-1])
+        {
+ 
+ 
+        cout<<i+1<<endl;
+        break;
+        }
+        }
+        //cout<<b.size()<<endl;
+    }
+}
