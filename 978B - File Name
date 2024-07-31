@@ -1,0 +1,28 @@
+#include<iostream>
+#include<string>
+using namespace std;
+ 
+int main()
+{
+  int i,t;
+  int count=0;
+  cin>>t;
+  string s;
+  cin>>s;
+  if(t<3)
+      {
+          cout<<'0';
+      }
+else{
+ 
+  for(i=0;i<t-2;i++)
+  {
+      if(s[i]=='x'&& s[i+1]=='x'&& s[i+2]=='x')
+      {
+         count++;
+ 
+      }
+  }
+  cout<<count;
+}
+}
