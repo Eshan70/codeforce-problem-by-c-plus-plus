@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,t;
+    cin>>t;
+    while(t--)
+    {
+        int n,x;
+        cin>>n;
+        int odd=0,even=0;
+        for(i=0;i<n*2;i++)
+        {
+            cin>>x;
+            if(x%2==0)
+            {
+               even++;
+            }
+            else if (x%2 !=0)
+            {
+                odd++;
+            }
+        }
+        if(odd==even)
+        {
+            cout<<"YES"<<endl;
+        }
+        else
+        {
+            cout<<"NO"<<endl;
+        }
+    }
+}
