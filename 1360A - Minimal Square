@@ -1,0 +1,54 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int t;
+    cin>>t;
+ 
+ 
+    while(t--)
+    {
+        int a,b;
+        cin>>a>>b;
+ 
+ 
+ 
+          if(a<b)
+        {
+            int c=a+a;
+            if(c>b)
+            {
+                cout<<c*c<<endl;
+            }
+            else if(c==b)
+            {
+                cout<<c*c<<endl;
+            }
+            else if(c<b)
+            {
+                cout<<b*b<<endl;
+            }
+        }
+        else if(a>b)
+        {
+           int d=b+b;
+            if(d>a)
+            {
+                cout<<d*d<<endl;
+            }
+            else if(d=a)
+            {
+                cout<<d*d<<endl;
+            }
+            else if(d<a)
+            {
+                cout<<a*a<<endl;
+            }
+        }
+        else if(a==b)
+        {
+            cout<<(a+b)*(a+b)<<endl;
+        }
+    }
+}
