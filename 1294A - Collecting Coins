@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+    int a,b,c,n;
+    cin>>a>>b>>c>>n;
+ 
+    int q=a+b+c+n;
+    if(q%3!=0)
+    {
+        cout<<"NO"<<endl;
+    }
+    else
+    {
+        if(a>q/3 || b>q/3 || c>q/3)
+        {
+            cout<<"NO"<<endl;
+        }
+        else
+        {
+            cout<<"YES"<<endl;
+        }
+    }
+ 
+}}
