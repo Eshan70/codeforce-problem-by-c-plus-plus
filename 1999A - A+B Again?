@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int t;
+    cin>>t;
+    int count=0;
+ 
+    while(t--)
+    {
+        int n,divided,module;
+        cin>>n;
+ 
+        divided=n/10;
+        module=n%10;
+        cout<<divided+module<<endl;
+    }
+}
