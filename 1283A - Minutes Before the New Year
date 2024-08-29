@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int t;
+    cin>>t;
+    int a=24*60;
+ 
+    while(t--)
+    {
+        int h,m;
+        cin>>h>>m;
+ 
+        int houre=h*60;
+        int mini=houre+m;
+ 
+        int time=a-mini;
+ 
+        cout<<time<<endl;
+    }
+}
