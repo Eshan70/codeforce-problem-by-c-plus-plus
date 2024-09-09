@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int  n,a,b;
+        cin>>n>>a>>b;
+        if(a*2<b)
+        {
+            cout<<a*n<<endl;
+        }
+        else
+        {
+            int l=n/2;
+            int m=n%2;
+            cout<<l*b+m*a<<endl;
+        }
+    }
+}
