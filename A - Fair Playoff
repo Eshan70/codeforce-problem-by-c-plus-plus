@@ -1,0 +1,67 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int a,b,c,d;
+        cin>>a>>b>>c>>d;
+        int s;
+        int z;
+ 
+        s=max(a,b);
+        z=max(c,d);
+ 
+        if(s==a && z==c)
+        {
+            if(a<d || c<b)
+            {
+                cout<<"NO"<<endl;
+            }
+            else
+            {
+                cout<<"YES"<<endl;
+            }
+        }
+ 
+         if(s==a && z==d)
+        {
+            if(a<c || d<b)
+            {
+                cout<<"NO"<<endl;
+            }
+            else
+            {
+                cout<<"YES"<<endl;
+            }
+        }
+ 
+ 
+         if(s==b && z==c)
+        {
+            if(b<d || c<a)
+            {
+                cout<<"NO"<<endl;
+            }
+            else
+            {
+                cout<<"YES"<<endl;
+            }
+        }
+ 
+         if(s==b && z==d)
+        {
+            if(b<c || d<a)
+            {
+                cout<<"NO"<<endl;
+            }
+            else
+            {
+                cout<<"YES"<<endl;
+            }
+        }
+    }
+ 
+}
