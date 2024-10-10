@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        int n, x, y;
+        cin >> n >> x >> y;
+ 
+        int e = min(x, y);
+        double g = (double)n / e;
+        int result = ceil(g);
+ 
+        cout << result << endl;
+    }
+ 
+    return 0;
+}
