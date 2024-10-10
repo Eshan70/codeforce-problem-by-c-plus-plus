@@ -1,0 +1,20 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    int len=1;
+    string s1="";
+ 
+   for(int i=0; i<n; i++)
+   {
+       s1+=s[i];
+        i+=(len++);
+   }
+   cout<<s1;
+ 
+}
