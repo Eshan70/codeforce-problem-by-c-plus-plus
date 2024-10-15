@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   int t;
+   cin>>t;
+   while(t--)
+   {
+         string s;
+         cin>>s;
+         int m=s[0]-'0';//this line identify the first index value
+         cout<<(s.size()-1)*9+m<<endl;
+   }
+}
