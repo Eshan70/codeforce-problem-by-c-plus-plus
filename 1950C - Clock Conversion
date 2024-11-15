@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        string s;
+        cin >> s;
+ 
+    
+        int hour = stoi(s.substr(0, 2));  
+        string minute = s.substr(3, 2);   
+ 
+        
+        string period;
+        if (hour == 0) {    
+            hour = 12;
+            period = "AM";
+        } else if (hour < 12) {  
+            period = "AM";
+        } else if (hour == 12) { 
+            period = "PM";
+        } else {                 
+            hour -= 12;
+            period = "PM";
+        }
+ 
+        
+        printf("%02d:%s %s\n", hour, minute.c_str(), period.c_str());
+    }
+    return 0;
+}
