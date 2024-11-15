@@ -1,0 +1,52 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+    int t;
+    cin >> t;
+ 
+    while (t--) {
+        int n;
+        cin >> n;
+ 
+        long long a[n];
+        long long b[n];
+ 
+ 
+        for (int i = 0; i < n; i++) {
+            cin >> a[i];
+        }
+        for (int i = 0; i < n; i++) {
+            cin >> b[i];
+        }
+ 
+ 
+        for (int i = 0; i < n; i++) {
+            if (a[i] > b[i]) {
+                swap(a[i], b[i]);
+            }
+        }
+ 
+ 
+       int mx = a[0];
+        for (int i = 1; i < n; i++) {
+            if (mx < a[i]) {
+                mx = a[i];
+ 
+            }
+        }
+         int xx = b[0];
+        for (int i = 1; i < n; i++) {
+            if (xx < b[i]) {
+                xx = b[i];
+ 
+            }
+        }
+ 
+ 
+        long long ans = mx* xx;
+        cout << ans << endl;
+    }
+ 
+}
