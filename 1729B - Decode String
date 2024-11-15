@@ -1,0 +1,35 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+int tt;
+cin>>tt;
+while(tt--) {
+        int n;
+        cin>>n;
+        string s;
+        cin>>s;
+ 
+        string s1="";
+ 
+        for(int i=0; i<n; i++) {
+                if(i+2<n && s[i+2]=='0' && (i+3>=n || s[i+3]!='0')){
+                int num=((s[i]-'0')*10)+(s[i+1]-'0');
+                int num1=96+num;
+                s1=((char)num1);
+                i+=2;
+                cout<<s1;
+            }
+            else{
+                int num=((s[i]-'0'));
+                s1=((char)(96+num));
+                cout<<s1;
+            }
+        }
+        cout<<endl;
+ 
+ 
+}
+ 
+}
