@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+int tt;
+cin>>tt;
+ 
+while(tt--) {
+        int n;
+        cin>>n;
+        int a[n];
+        for(int i=0; i<n; i++) {
+                cin>>a[i];
+ 
+                }
+               sort(a,a+n);
+    int i=a[n-1];
+    int j=a[0];
+    int k=a[n-2];
+    int l=a[1];
+    int ans=abs(i-j)+abs(j-k)+abs(k-l)+abs(l-i);
+    cout<<ans<<endl;
+ 
+}
+}
