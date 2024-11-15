@@ -1,0 +1,41 @@
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+ 
+int main() {
+    int n, k;
+    cin >> n >> k;
+    int a[n];
+ 
+ 
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+ 
+    unordered_map<int, int> index;
+    int distinctCount = 0;
+ 
+ 
+    for (int i = 0; i < n; i++) {
+        if (index.find(a[i]) == index.end()) {
+            index[a[i]] = i + 1;
+            distinctCount++;
+        }
+    }
+ 
+ 
+    if (distinctCount >= k) {
+        cout << "YES" << endl;
+        int count = 0;
+        for (const auto& pair : index) {
+            cout << pair.second << " ";
+            count++;
+            if (count == k) break;
+        }
+        cout << endl;
+    } else {
+        cout << "NO" << endl;
+    }
+ 
+    return 0;
+}
