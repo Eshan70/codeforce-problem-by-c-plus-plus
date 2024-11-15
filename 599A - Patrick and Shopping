@@ -1,0 +1,17 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+ 
+int main() {
+    int d1, d2, d3;
+    cin >> d1 >> d2 >> d3;
+ 
+ 
+    int o1 = d1 + d2 + d3;
+    int o2 = 2 * (d1 + d2);
+    int o3 = 2 * (d1 + d3);
+     int o4 = 2 * (d2 + d3);
+    int mn = min({o1, o2, o3, o4});
+ 
+    cout << mn<<endl;
+}
