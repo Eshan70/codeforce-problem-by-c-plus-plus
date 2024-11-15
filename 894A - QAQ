@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+ 
+int main() {
+    string s;
+    cin >> s;
+    int count = 0;
+ 
+    for (int i = 0; i < s.size(); i++) {
+        if (s[i] == 'A') {
+            int left_Q = 0, right_Q = 0;
+ 
+ 
+            for (int j = 0; j < i; j++) {
+                if (s[j] == 'Q')
+                left_Q++;
+            }
+ 
+ 
+            for (int j = i + 1; j < s.size(); j++) {
+                if (s[j] == 'Q')
+                right_Q++;
+            }
+ 
+ 
+            count += left_Q * right_Q;
+        }
+    }
+ 
+    cout << count << endl;
+ 
+}
