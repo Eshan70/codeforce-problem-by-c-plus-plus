@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+
+    int count = 0;
+
+    while (t--) {
+        char e;
+        int v;
+        cin >> e >> v;
+
+        if (e == 'P') {
+
+            count+= v;
+        } else if (e == 'B') {
+
+            if (v > count) {
+
+                cout << "YES" << endl;
+                count= 0;
+            } else {
+
+                cout << "NO" << endl;
+                count -= v;
+            }
+        }
+    }
+
+    return 0;
+}
