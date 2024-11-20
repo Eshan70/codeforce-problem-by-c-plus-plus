@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+ 
+bool isPerfectSquare(int x) {
+    int root = sqrt(x);  // Calculate the integer square root of x
+    return root * root == x;  // Check if the square of the root equals x
+}
+ 
+int main() {
+    int T;
+    cin >> T;  // Read the number of test cases
+ 
+    while (T--) {
+        int n;
+        cin >> n;  // Read the number of integers in this test case
+ 
+        int count = 0;  // Count of non-perfect square numbers
+        for (int i = 0; i < n; i++) {
+            int x;
+            cin >> x;  // Read each number
+            if (!isPerfectSquare(x)) {
+                count++;  // Increment count if the number is not a perfect square
+            }
+        }
+ 
+        cout << count << endl;  // Output the result for this test case
+    }
+ 
+    return 0;
+}
