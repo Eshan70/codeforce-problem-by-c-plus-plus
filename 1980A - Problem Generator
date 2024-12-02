@@ -1,0 +1,38 @@
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+#include <algorithm>
+ 
+using namespace std;
+ 
+int main() {
+    int t;
+    cin >> t;
+ 
+    while (t--) {
+        int n, m;
+        cin >> n >> m;
+        string a;
+        cin >> a;
+ 
+        // Count the frequency of each problem difficulty in the bank
+        unordered_map<char, int> problemCount;
+        for (char c : a) {
+            problemCount[c]++;
+        }
+ 
+        // We need m problems of each difficulty level from 'A' to 'G'
+        string difficulties = "ABCDEFG";
+        int additionalProblems = 0;
+ 
+        for (char difficulty : difficulties) {
+            if (problemCount[difficulty] < m) {
+                additionalProblems += (m - problemCount[difficulty]);
+            }
+        }
+ 
+        cout << additionalProblems << endl;
+    }
+ 
+    return 0;
+}
