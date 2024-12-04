@@ -1,0 +1,52 @@
+#pragma GCC optimize("unroll-loops")
+#pragma gcc optimize("Ofast")
+#pragma GCC optimization("Ofast")
+#pragma optimize(Ofast)
+#include <bits/stdc++.h>
+using namespace std;
+ 
+#define int long long
+#define str string
+#define fastio ios::sync_with_stdio(0), cin.tie(0);
+#define fs first
+#define ss second
+#define endl '\n'
+#define all(x) (x).begin(), (x).end()
+#define len(x) x.size()
+ 
+#define print(a)          \
+    for (auto &x : a)     \
+        cout << x << " "; \
+    cout << endl;
+ 
+#define printmp(a)    \
+    for (auto &x : a) \
+        cout << x.fs << " " << x.ss << endl;
+ 
+const int mod = 998244353;
+ 
+void solve(){
+    str s;
+    cin >> s;
+    for(int i = 0; i < 8; i ++){
+        if(i + 1 != s[1] - '0'){
+            cout << s[0] << i + 1 << endl;
+        }
+    }
+    for(char i = 'a'; i <= 'h'; i ++){
+        if(i != s[0]){
+            cout << i << s[1] << endl;
+        }
+    }
+}
+ 
+signed main()
+{
+    fastio int t = 1;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+        cout << endl;
+    }
+}
