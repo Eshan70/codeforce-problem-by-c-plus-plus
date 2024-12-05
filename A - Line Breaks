@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+#include <string>
+ 
+using namespace std;
+ 
+int main() {
+    int t; // Number of test cases
+    cin >> t;
+ 
+    while (t--) {
+        int n, m; // Number of words and maximum characters on the first strip
+        cin >> n >> m;
+ 
+        vector<string> words(n);
+        for (int i = 0; i < n; ++i) {
+            cin >> words[i];
+        }
+ 
+        int totalLength = 0;
+        int x = 0; // Number of words that can fit on the first strip
+ 
+        for (int i = 0; i < n; ++i) {
+            if (totalLength + words[i].length() <= m) {
+                totalLength += words[i].length();
+                x++;
+            } else {
+                break; // Stop when we can't fit more words
+            }
+        }
+ 
+        cout << x << endl;
+    }
+ 
+    return 0;
+}
