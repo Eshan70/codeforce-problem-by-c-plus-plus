@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int tt;
+    cin >> tt;
+
+    while (tt--) {
+        int n;
+        cin >> n;
+        vector<long long> a(n), b(n);
+        long long minia = INT_MAX, minib = INT_MAX;
+
+
+        for (int i = 0; i < n; i++) {
+            cin >> a[i];
+            minia = min(minia, a[i]);
+        }
+
+        for (int i = 0; i < n; i++) {
+            cin >> b[i];
+            minib = min(minib, b[i]);
+        }
+
+        long long total = 0;
+
+
+        for (int i = 0; i < n; i++) {
+            int a1 = a[i] - minia;
+            int b1 = b[i] - minib;
+            total += max(a1, b1);
+        }
+
+        cout << total << endl;
+    }
+
+    return 0;
+}
