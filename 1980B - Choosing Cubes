@@ -1,0 +1,52 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+// Function to solve each test case
+string solveTestCase(int n, int f, int k, vector<int>& a) {
+    int favValue = a[f - 1]; // Value of the favorite cube
+    vector<int> sortedA = a;
+
+    sort(sortedA.begin(), sortedA.end(), greater<int>()); // Sort in non-increasing order
+
+    // Count the number of cubes with value greater than favValue
+    int greaterCount = 0;
+    for (int i = 0; i < n; ++i) {
+        if (sortedA[i] > favValue) greaterCount++;
+    }
+
+    // Count the number of cubes with value equal to favValue
+    int equalCount = 0;
+    for (int i = 0; i < n; ++i) {
+        if (sortedA[i] == favValue) equalCount++;
+    }
+
+    // Check if the favorite cube is always, never, or maybe removed
+    if (greaterCount >= k) {
+        return "NO"; // The favorite cube cannot be removed
+    } else if (greaterCount + equalCount <= k) {
+        return "YES"; // The favorite cube is guaranteed to be removed
+    } else {
+        return "MAYBE"; // The favorite cube may or may not be removed
+    }
+}
+
+int main() {
+    int t;
+    cin >> t; // Number of test cases
+
+    while (t--) {
+        int n, f, k;
+        cin >> n >> f >> k; // Read n, f, k
+
+        vector<int> a(n);
+        for (int i = 0; i < n; ++i) {
+            cin >> a[i]; // Read the values on the cubes
+        }
+
+        cout << solveTestCase(n, f, k, a) << endl;
+    }
+
+    return 0;
+}
