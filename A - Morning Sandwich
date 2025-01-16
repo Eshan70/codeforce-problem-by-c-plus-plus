@@ -1,0 +1,20 @@
+
+#include<iostream>
+using namespace std;
+int main() {
+int n;
+cin>>n;
+
+while(n--) {
+        int b,c,h;
+        cin>>b>>c>>h;
+        if((c+h)>=b)
+                cout<<b+(b-1)<<endl;
+                //cout<<2*(c+h)+1<<endl;
+        else
+                //cout<<b+(b-1)<<endl;
+         cout<<2*(c+h)+1<<endl;
+
+}
+
+}
