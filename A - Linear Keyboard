@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int test;
+    cin >> test;
+
+    while (test--) {
+        string s, a;
+        cin >> s >> a;
+
+
+        unordered_map<char, int> e;
+
+        for (int i = 0; i < 26; i++) {
+            e[s[i]] = i;
+        }
+
+
+        int totalTime = 0;
+        for (int i = 1; i < a.size(); i++) {
+            totalTime += abs(e[a[i]] - e[a[i - 1]]);
+        }
+
+        cout << totalTime << endl;
+    }
+
+
+}
