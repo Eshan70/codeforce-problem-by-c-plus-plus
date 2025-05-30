@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+int t;
+cin>>t;
+
+while(t--){
+        string s,s1,s2;
+        cin>>s>>s1>>s2;
+
+
+        cout<<(char)tolower(s[0])<<(char)tolower(s1[0])<<(char)tolower(s2[0]);
+        cout<<endl;
+}
+
+}
