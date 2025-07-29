@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        vector<int> a(n);
+        for (int i = 0; i < n; i++) cin >> a[i];
+
+        // Count 2's in total
+        int total2 = 0;
+        for (int x : a) if (x == 2) total2++;
+
+        int prefix2 = 0;
+        int ans = -1;
+        for (int k = 0; k < n - 1; k++) {
+            if (a[k] == 2) prefix2++;
+            int suffix2 = total2 - prefix2;
+            // Product equality means same number of 2's
+            if (prefix2 == suffix2) {
+                ans = k + 1; // 1-based index
+                break;
+            }
+        }
+
+        cout << ans << "\n";
+    }
+    return 0;
+}
