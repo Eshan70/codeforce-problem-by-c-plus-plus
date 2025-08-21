@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+ 
+long long digitSum(long long n) {
+    if (n == 0) return 0;
+    long long base = 1;
+    long long len = 0;
+    while (base * 10 <= n) {
+        base *= 10;
+        len++;
+    }
+    long long first = n / base;
+    long long remainder = n % base;
+    long long sumFirst = first * (remainder + 1) + (first - 1) * first / 2 * base;
+    long long sumRest = first * 45 * len * (base / 10);
+    return sumFirst + sumRest + digitSum(remainder);
+}
+ 
+int partialSum(long long num, int len) {
+    string s = to_string(num);
+    int sum = 0;
+    for (int i = 0; i < len; i++) {
+        sum += s[i] - '0';
+    }
+    return sum;
+}
+ 
+void solve(long long k) {
+    long long d = 1;
+    long long start = 1;
+    while (true) {
+        long long digits_in_group = 9 * start * d;
+        if (k <= digits_in_group) {
+            break;
+        }
+        k -= digits_in_group;
+        d++;
+        start *= 10;
+    }
+    long long offset = (k - 1) / d;
+    long long num = start + offset;
+    int pos = (k - 1) % d;
+    long long total = digitSum(num - 1) + partialSum(num, pos + 1);
+    cout << total << endl;
+}
+ 
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        long long k;
+        cin >> k;
+        solve(k);
+    }
+    return 0;
+}
