@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+    int test;
+    cin >> test;
+ 
+    while(test--) {
+        int n, m;
+        string a, b, c;
+ 
+        cin >> n;
+        cin >> a;
+        cin >> m;
+        cin >> b;
+        cin >> c;
+ 
+        string V1;
+        string D1;
+ 
+        for(int i = 0; i < c.length(); i++){
+            if(c[i] == 'D'){
+                D1 += b[i];       
+            }
+            else {
+                V1 = b[i] + V1;   
+            }
+        }
+ 
+        cout << V1 + a + D1 << endl;
+    }
+    return 0;
+}
